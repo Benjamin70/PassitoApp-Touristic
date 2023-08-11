@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido{
+    margin-top: 2rem;
+    &__grid{
+        @include m.desktop{ 
+            margin-top: 2rem;
+          @include m.grid(4, 2rem);  
+        }
+    }
+
+  
+}
+
+.imagen{
+    background-color: v.$grisArenaOscuro; 
+    margin-bottom: 2rem;
+    transition-property: transform;
+    transition-duration: 300ms;
+
+    &:hover{
+        transform: rotate(-4deg) scale(1.1);
+    }
+    
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    @include m.desktop{ 
+        margin-bottom: 0;
+    }
+    
+    &__heading{
+        text-align: center;
+        padding: 2rem 0;
+        @include m.desktop{ 
+            padding: 2rem 0 0 0;
+            text-align: center;
+        }
+    }
+}

@@ -7,9 +7,15 @@
 
     &__grid{ 
         padding: 0 1rem;
+        @include m.tablet{ 
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
         @include m.desktop{ 
             @include m.grid(5, 2rem);
             align-items: center;
+            padding: 0 1rem;
         }
     }
     &__contenido{
@@ -18,7 +24,10 @@
         padding: 2rem 1rem;
     }
 
-    &__imagen{
+    &__imagen{   
         grid-column: 4 / 6;
+        @include m.tablet{ 
+            align-items:center;
+        }
     }
 }
