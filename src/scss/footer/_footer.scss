@@ -1,0 +1,12 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    &__wave{
+        margin: 0;
+        @include m.desktop{ 
+            margin: 1rem 0 0 0;
+        }
+    }
+
+}
